@@ -12,9 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then((html) => {
                         content.innerHTML = html;
                         if (file == "pages/climbs.html") {
-                            var img = document.getElementById("climbImage");
+                            var imgHeight = document.getElementById("climbImage").clientHeight;
+                            var infoHeight = document.getElementById("routeStatic").clientHeight;
                             var comments = document.getElementById("betaComments");
-                            comments.style.maxHeight = img.height + "px";
+                            console.log(infoHeight);
+                            comments.style.maxHeight = (imgHeight - infoHeight) + "px";
                         };
                     });
             });
@@ -22,18 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*
-try {
-    window.onload = function() {
-        var img = document.getElementById("climbImage");
-        var comments = document.getElementById("betaComments");
-        comments.style.maxHeight = img.height + "px";
-    };
-    window.onresize = function() {
-        var img = document.getElementById("climbImage");
-        var comments = document.getElementById("betaComments");
-        comments.style.maxHeight = img.height + "px";
-    };
-} catch(error) {
-    console.log("climbs.html not loaded");
+window.onload = function() {
+    var img = document.getElementById("climbImage");
+    var comments = document.getElementById("betaComments");
+    comments.style.maxHeight = img.height + "px";
+};
+window.onresize = function() {
+    var img = document.getElementById("climbImage");
+    var comments = document.getElementById("betaComments");
+    comments.style.maxHeight = img.height + "px";
 };
 */

@@ -1,15 +1,17 @@
 <div class="container my-5">
     <div class="p-5 bg-body-tertiary rounded-3 row">
         <div class="col align-self-start text-left">
-            <h1>Name</h1>
-            <h2 class="text-secondary">Difficulty</h2>
-            <form id="addComment" method="post">
-                <div class="mb-3">
-                    <textarea class="form-control" id="commentText" rows="3" placeholder="Add a comment..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <div id="betaComments" class="overflow-auto"></div>
+            <div id="routeStatic">
+                <h1>Name</h1>
+                <h2 class="text-secondary">Difficulty</h2>
+                <form id="addComment" method="post">
+                    <div class="mb-3">
+                        <textarea class="form-control" id="commentText" rows="3" placeholder="Add a comment..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div id="betaComments" class="mb-3 overflow-auto"></div>
         </div>
         <div class="col align-self-center text-center">
             <img id="climbImage" src="https://picsum.photos/3024/4032" class="img-fluid"></img>
