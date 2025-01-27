@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const content = document.getElementById("content");
+document.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('content');
 
-    document.querySelectorAll("a[data-file]"). forEach((link) => {
-        link.addEventListener("click", () => {
-                const file = link.getAttribute("data-file");
+    document.querySelectorAll('a[data-file]').forEach((link) => {
+        link.addEventListener('click', () => {
+            const file = link.getAttribute('data-file');
 
-                fetch(file)
-                    .then((response) => {
-                        return response.text();
-                    })
-                    .then((html) => {
-                        content.innerHTML = html;
-                        if (file == "pages/climbs.html") {
-                            var imgHeight = document.getElementById("climbImage").clientHeight;
-                            var infoHeight = document.getElementById("routeStatic").clientHeight;
-                            var comments = document.getElementById("betaComments");
-                            console.log(infoHeight);
-                            comments.style.maxHeight = (imgHeight - infoHeight) + "px";
-                        };
-                    });
-            });
+            fetch(file)
+                .then((response) => response.text())
+                .then((html) => {
+                    content.innerHTML = html;
+                    if (file === 'pages/climbs.html') {
+                        const imgHeight =
+                            document.getElementById('climbImage').clientHeight;
+                        const infoHeight =
+                            document.getElementById('routeStatic').clientHeight;
+                        const comments =
+                            document.getElementById('betaComments');
+                        console.log(infoHeight);
+                        comments.style.maxHeight = `${imgHeight - infoHeight}px`;
+                    }
+                });
+        });
     });
 });
 
