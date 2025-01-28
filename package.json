@@ -49,6 +49,5 @@
             "stylelint --config config/.stylelintrc.json --fix",
             "prettier --config config/.prettierrc.json --write"
         ]
-    },
-    "type": "module"
+    }
 }
