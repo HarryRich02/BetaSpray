@@ -1,0 +1,36 @@
+<div class="container my-5">
+    <div class="p-5 bg-body-tertiary rounded-3 row">
+        <!--Left Column (ie. info)-->
+        <div class="col-sm align-self-start text-left">
+            <div id="routeStatic">
+                <h1>Name</h1>
+                <h2 class="text-secondary">Difficulty</h2>
+                <form id="addComment" method="post">
+                    <div class="mb-3">
+                        <textarea
+                            class="form-control"
+                            id="commentText"
+                            rows="3"
+                            placeholder="Add a comment..."
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
+            <!--Dynamically loaded comments-->
+            <div id="betaComments" class="mb-3 overflow-auto"></div>
+        </div>
+
+        <!--Right Column (ie. image)-->
+        <div class="col-sm order-first order-sm-1 align-self-center text-center">
+            <img
+                id="climbImage"
+                src="https://picsum.photos/3024/4032"
+                class="img-fluid"
+            />
+        </div>
+    </div>
+</div>

@@ -1,49 +1,53 @@
 {
-  "name": "betaspray",
-  "version": "1.0.0",
-  "description": "Programming (Black) Assignment 1",
-  "main": "index.js",
-  "scripts": {
-    "pretest": "eslint --config config/.eslintrc.js .",
-    "test": "jest",
-    "format": "prettier --config config/.prettierrc.json --write .",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HarryRich02/BetaSpray.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HarryRich02/BetaSpray/issues"
-  },
-  "homepage": "https://github.com/HarryRich02/BetaSpray#readme",
-  "dependencies": {
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "express": "^4.21.2"
-  },
-  "devDependencies": {
-    "eslint": "^9.18.0",
-    "eslint-config-prettier": "^10.0.1",
-    "husky": "^9.1.7",
-    "jest": "^29.7.0",
-    "lint-staged": "^15.4.1",
-    "prettier": "^3.4.2",
-    "stylelint": "^16.13.2",
-    "stylelint-config-standard": "^37.0.0",
-    "stylelint-prettier": "^5.0.2"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --config config/.eslintrc.js --fix",
-      "prettier --config config/.prettierrc.json --write"
-    ],
-    "*.css": [
-      "stylelint --config config/.stylelintrc.json --fix",
-      "prettier --config config/.prettierrc.json --write"
-    ]
-  }
+    "name": "betaspray",
+    "version": "1.0.0",
+    "description": "Programming (Black) Assignment 1",
+    "main": "index.js",
+    "scripts": {
+        "pretest": "eslint --config config/.eslintrc.json .",
+        "test": "jest",
+        "format": "prettier --config config/.prettierrc.json --write .",
+        "prepare": "husky install",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HarryRich02/BetaSpray.git"
+    },
+    "keywords": [],
+    "author": "Harry Richards",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HarryRich02/BetaSpray/issues"
+    },
+    "homepage": "https://github.com/HarryRich02/BetaSpray#readme",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "eslint": "^8.57.1",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jest": "^28.11.0",
+        "express": "^4.21.2"
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^10.0.1",
+        "husky": "^9.1.7",
+        "jest": "^29.7.0",
+        "lint-staged": "^15.4.1",
+        "prettier": "^3.4.2",
+        "stylelint": "^16.13.2",
+        "stylelint-config-standard": "^37.0.0",
+        "stylelint-prettier": "^5.0.2"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --config config/.eslintrc.js --fix",
+            "prettier --config config/.prettierrc.json --write"
+        ],
+        "*.css": [
+            "stylelint --config config/.stylelintrc.json --fix",
+            "prettier --config config/.prettierrc.json --write"
+        ]
+    }
 }
