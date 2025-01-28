@@ -14,10 +14,10 @@ function init() {
                     const overview = document.getElementById('overview');
                     const climbs = document.getElementById('climbs');
 
-                    //If the page is climbs.html, resize the text area to match the image
+                    // If the page is climbs.html, resize the text area to match the image
                     if (file === 'pages/climbs.html') {
-                        overview.classList = "nav-link px-2 link-body-emphasis";
-                        climbs.classList = "nav-link px-2 link-secondary";
+                        overview.classList = 'nav-link px-2 link-body-emphasis';
+                        climbs.classList = 'nav-link px-2 link-secondary';
 
                         const imgHeight =
                             document.getElementById('climbImage').clientHeight;
@@ -27,10 +27,10 @@ function init() {
                             document.getElementById('betaComments');
                         comments.style.maxHeight = `${imgHeight - infoHeight}px`;
 
-                    //Make buttons work on new page load
+                        // Make buttons work on new page load
                     } else if (file === 'pages/overview.html') {
-                        climbs.classList = "nav-link px-2 link-body-emphasis";
-                        overview.classList = "nav-link px-2 link-secondary";
+                        climbs.classList = 'nav-link px-2 link-body-emphasis';
+                        overview.classList = 'nav-link px-2 link-secondary';
 
                         init();
                     }
