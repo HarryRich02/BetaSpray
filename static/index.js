@@ -116,15 +116,12 @@ addClimb.addEventListener('submit', async (event) => {
     });
 });
 
-window.onload = function() {
+window.onload = function () {
     init();
 };
-window.onresize = function() {
-    const imgHeight =
-        document.getElementById('climbImage').clientHeight;
-    const infoHeight =
-        document.getElementById('routeStatic').clientHeight;
-    const comments =
-        document.getElementById('betaComments');
+window.onresize = function () {
+    const imgHeight = document.getElementById('climbImage').clientHeight;
+    const infoHeight = document.getElementById('routeStatic').clientHeight;
+    const comments = document.getElementById('betaComments');
     comments.style.maxHeight = `${imgHeight - infoHeight}px`;
 };
