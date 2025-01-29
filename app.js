@@ -39,7 +39,7 @@ app.get("/api/comment/get", function(req, resp){
 });
 
 app.post("/api/comment/add", function(req, resp){
-    const climb = document.getElementById("climbName").innerHTML
+    const climb = req.query.climb;
     let text = req.body.commentText;
 
     let newComment = {"climb": climb, "text": text};
@@ -50,6 +50,6 @@ app.post("/api/comment/add", function(req, resp){
     let commentsText = JSON.stringify(comments);
     fs.writeFileSync("./data/comments.json", commentsText);
     resp.send(200);
-})
+});
 
 module.exports = app;
