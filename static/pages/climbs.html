@@ -3,13 +3,13 @@
         <!--Left Column (ie. info)-->
         <div class="col-sm align-self-start text-left">
             <div id="routeStatic">
-                <h1>Name</h1>
-                <h2 class="text-secondary">Difficulty</h2>
+                <h1 id="climbName">Name</h1>
+                <h2 id="climbDiff" class="text-secondary">Difficulty</h2>
                 <form id="addComment" method="post">
                     <div class="mb-3">
                         <textarea
                             class="form-control"
-                            id="commentText"
+                            name="commentText"
                             rows="3"
                             placeholder="Add a comment..."
                         ></textarea>
@@ -21,7 +21,66 @@
             </div>
 
             <!--Dynamically loaded comments-->
-            <div id="betaComments" class="mb-3 overflow-auto"></div>
+            <div id="betaComments" class="p-5 mb-3 overflow-auto list-group">
+                <a
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                >
+                    <img
+                        src="img/user.png"
+                        alt="twbs"
+                        width="32"
+                        height="32"
+                        class="rounded-circle flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <p class="mb-0 opacity-75">
+                                Some placeholder content in a paragraph.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                >
+                    <img
+                        src="img/user.png"
+                        alt="twbs"
+                        width="32"
+                        height="32"
+                        class="rounded-circle flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <p class="mb-0 opacity-75">
+                                Some placeholder content in a paragraph that
+                                goes a little longer so it wraps to a new line.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a
+                    class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                    aria-current="true"
+                >
+                    <img
+                        src="img/user.png"
+                        alt="twbs"
+                        width="32"
+                        height="32"
+                        class="rounded-circle flex-shrink-0"
+                    />
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                            <p class="mb-0 opacity-75">
+                                Some placeholder content in a paragraph.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!--Right Column (ie. image)-->
