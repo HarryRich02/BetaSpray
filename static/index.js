@@ -1,3 +1,59 @@
+async function loadClimb(i) {
+    const climbName = document.getElementById('climbName');
+    const climbDiff = document.getElementById('climbDiff');
+    const betaComments = document.getElementById('betaComments');
+    const climbImage = document.getElementById('climbImage');
+
+    const climbResp = await fetch(`api/climb/get?i=${i}`);
+    const newClimb = await climbResp.json();
+    const commentResp = await fetch(
+        `api/comment/get?climb=${encodeURIComponent(newClimb.name)}`,
+    );
+    const newComments = await commentResp.json();
+
+    climbName.innerHTML = newClimb.name;
+    climbDiff.innerHTML = newClimb.difficulty;
+    climbImage.src = newClimb.imgURL;
+    betaComments.innerHTML = '';
+    for (const comment of newComments) {
+        betaComments.innerHTML += `
+        <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="img/user.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <p class="mb-0 opacity-75">${comment}</p>
+                </div>
+            </div>
+        </a>
+        `;
+    }
+
+    const addComment = document.getElementById('addComment');
+    addComment.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(addComment);
+        const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
+        console.log('Form data', formJSON);
+        await fetch(
+            `/api/comment/add?climb=${encodeURIComponent(newClimb.name)}`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: formJSON,
+            },
+        );
+
+        document.getElementById('climbs').click();
+    });
+
+    const imgHeight = document.getElementById('climbImage').clientHeight;
+    const infoHeight = document.getElementById('routeStatic').clientHeight;
+    const comments = document.getElementById('betaComments');
+    comments.style.maxHeight = `${imgHeight - infoHeight}px`;
+}
+
 function init() {
     const content = document.getElementById('content');
 
@@ -39,78 +95,24 @@ function init() {
                 });
         });
     });
-};
-
-async function loadClimb(i){
-    const climbName = document.getElementById("climbName");
-    const climbDiff = document.getElementById("climbDiff");
-    const betaComments = document.getElementById("betaComments");
-    const climbImage = document.getElementById("climbImage");
-
-    let climb_resp = await fetch(`api/climb/get?i=${i}`);
-    let new_climb = await climb_resp.json();
-    let comment_resp = await fetch(`api/comment/get?climb=${encodeURIComponent(new_climb.name)}`);
-    let new_comments = await comment_resp.json();
-
-    climbName.innerHTML = new_climb.name;
-    climbDiff.innerHTML = new_climb.difficulty;
-    climbImage.src = new_climb.imgURL;
-    betaComments.innerHTML = "";
-    for (let comment of new_comments){
-        betaComments.innerHTML += `
-        <a class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-            <img src="img/user.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-            <div class="d-flex gap-2 w-100 justify-content-between">
-                <div>
-                    <p class="mb-0 opacity-75">${comment}</p>
-                </div>
-            </div>
-        </a>
-        `;
-    };
-
-    const addComment = document.getElementById("addComment");
-    addComment.addEventListener("submit", async function(event){
-        event.preventDefault();
-        const formData = new FormData(addComment);
-        const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
-        console.log("Form data", formJSON);
-        const response = await fetch(`/api/comment/add?climb=${encodeURIComponent(new_climb.name)}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: formJSON
-        });
-
-        document.getElementById("climbs").click();
-    });
-
-    const imgHeight =
-        document.getElementById('climbImage').clientHeight;
-    const infoHeight =
-        document.getElementById('routeStatic').clientHeight;
-    const comments =
-        document.getElementById('betaComments');
-    comments.style.maxHeight = `${imgHeight - infoHeight}px`;
-};
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
 });
 
-const addClimb = document.getElementById("addClimb");
-addClimb.addEventListener("submit", async function(event){
+const addClimb = document.getElementById('addClimb');
+addClimb.addEventListener('submit', async (event) => {
     event.preventDefault();
     const formData = new FormData(addClimb);
     const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
-    console.log("Form data", formJSON);
-    const response = await fetch("/api/climb/add", {
-        method: "POST",
+    console.log('Form data', formJSON);
+    await fetch('/api/climb/add', {
+        method: 'POST',
         headers: {
-            "Content-Type": "application/json"
+            'Content-Type': 'application/json',
         },
-        body: formJSON
+        body: formJSON,
     });
 });
 
