@@ -193,12 +193,12 @@
                         ></button>
                     </div>
                     <div class="modal-body p-5 pt-0">
-                        <form method="post">
+                        <form id="addClimb" method="post">
                             <div class="form-floating mb-3">
                                 <input
                                     type="text"
                                     class="form-control rounded-3"
-                                    id="floatingName"
+                                    name="floatingName"
                                     placeholder="Name"
                                 />
                                 <label for="floatingName">Route Name</label>
@@ -207,12 +207,22 @@
                                 <input
                                     type="text"
                                     class="form-control rounded-3"
-                                    id="floatingDifficulty"
+                                    name="floatingDifficulty"
                                     placeholder="V/Font Grade"
                                 />
                                 <label for="floatingDifficulty"
                                     >Difficulty</label
                                 >
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control rounded-3"
+                                    name="floatingImageURL"
+                                    placeholder="URL"
+                                />
+                                <label for="floatingImageURL"
+                                    >Image URL</label>
                             </div>
                             <button
                                 class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"

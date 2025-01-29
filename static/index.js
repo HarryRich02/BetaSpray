@@ -19,6 +19,8 @@ function init() {
                         overview.classList = 'nav-link px-2 link-body-emphasis';
                         climbs.classList = 'nav-link px-2 link-secondary';
 
+                        loadClimb(0);
+
                         const imgHeight =
                             document.getElementById('climbImage').clientHeight;
                         const infoHeight =
@@ -37,10 +39,48 @@ function init() {
                 });
         });
     });
-}
+};
+
+async function loadClimb(i){
+    const climbName = document.getElementById("climbName");
+    const climbDiff = document.getElementById("climbDiff");
+    const betaComments = document.getElementById("betaComments");
+    const climbImage = document.getElementById("climbImage");
+
+    betaComments.innerHTML = "";
+
+    let climb_resp = await fetch(`api/climb/get?i=${i}`);
+    let new_climb = await climb_resp.json();
+    console.log(encodeURIComponent(new_climb.name));
+    let comment_resp = await fetch(`api/comment/get?climb=${encodeURIComponent(new_climb.name)}`);
+    let new_comments = await comment_resp.json();
+
+    climbName.innerHTML = new_climb.name;
+    climbDiff.innerHTML = new_climb.difficulty;
+    climbImage.src = new_climb.imgURL;
+
+    for (let comment of new_comments){
+        betaComments.innerHTML += `${comment} <br />`;
+    };
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
+});
+
+const addClimb = document.getElementById("addClimb");
+addClimb.addEventListener("submit", async function(event){
+    event.preventDefault();
+    const formData = new FormData(addClimb);
+    const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
+    console.log("Form data", formJSON);
+    const response = await fetch("/api/climb/add", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: formJSON
+    });
 });
 
 /* To use later:
