@@ -2,6 +2,51 @@
     {
         "name": "Burden of Dreams",
         "difficulty": "V17",
-        "imgURL": "https://www.climber.co.uk/images/News%202023/20230414_Will_Bosi_BODs_DSC01926_%281%29.jpg"
+        "imgURL": "https://www.planetmountain.com/uploads/img/1/81988.jpg"
+    },
+    {
+        "name": "Midnight Lightning",
+        "difficulty": "V8",
+        "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Midnight_Lightning_yosemite.jpg/800px-Midnight_Lightning_yosemite.jpg"
+    },
+    {
+        "name": "The Mandala",
+        "difficulty": "V12",
+        "imgURL": "https://upload.wikimedia.org/wikipedia/commons/f/f8/The_Mandala_V12_boulder_California.jpg"
+    },
+    {
+        "name": "Dreamtime",
+        "difficulty": "V14",
+        "imgURL": "https://upload.wikimedia.org/wikipedia/commons/5/50/Dreamtime_Boulder_in_Cresciano_-_line.jpg"
+    },
+    {
+        "name": "Jade",
+        "difficulty": "V14",
+        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5l45cHb3iLhgcTZ1PMrVAjl5udnQ3ijZUw&s"
+    },
+    {
+        "name": "Big Island",
+        "difficulty": "V15",
+        "imgURL": "https://www.up-climbing.com/wp-content/uploads/2022/07/gull-2.jpg"
+    },
+    {
+        "name": "Lucid Dreaming",
+        "difficulty": "V15",
+        "imgURL": "https://img.ukclimbing.com/i/422489?fm=jpg&time=1709312882&w=600&fit=contain&s=fcbbc02a9e30562b324c9b80124e4121"
+    },
+    {
+        "name": "Story of Two Worlds",
+        "difficulty": "V15",
+        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRarxxbtcaeINO4DEwtUt8CibZJVSGZweNZBg&s"
+    },
+    {
+        "name": "The Wheel of Life",
+        "difficulty": "V16",
+        "imgURL": "https://hardclimbs.info/wp-content/uploads/2021/12/The-Wheel-of-Life-Boulder-1.jpg"
+    },
+    {
+        "name": "Bokassas Fridge",
+        "difficulty": "V14",
+        "imgURL": "https://www.lacrux.com/wp-content/uploads/2019/11/Thomas-Lindinger-im-Boulder-Bokassas-Fridge.jpg"
     }
 ]

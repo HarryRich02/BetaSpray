@@ -14,6 +14,8 @@
     "rules": {
         "no-console": "off",
         "no-restricted-syntax": "off",
-        "object-shorthand": "off"
+        "object-shorthand": "off",
+        "no-use-before-define": "off",
+        "no-param-reassign": "off"
     }
 }

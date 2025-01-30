@@ -29,14 +29,18 @@ app.post('/api/climb/add', (req, resp) => {
     resp.send(200);
 });
 
-app.get('/api/comment/get', (req, resp) => {
-    const { name } = req.query;
+app.get('/api/climb/length', (req, resp) => {
+    resp.send(climbs.length.toString());
+});
 
-    resp.send(
-        comments
-            .filter((climb) => climb.name === name)
-            .map((climb) => climb.text),
-    );
+app.get('/api/comment/get', (req, resp) => {
+    const { climb } = req.query;
+
+    const filteredComments = comments
+        .filter((comment) => comment.climb === climb)
+        .map((comment) => comment.text);
+
+    resp.send(filteredComments);
 });
 
 app.post('/api/comment/add', (req, resp) => {
