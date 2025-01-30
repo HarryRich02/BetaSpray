@@ -1,19 +1,118 @@
 [
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "test" },
-    { "climb": "Burden of Dreams", "text": "testing" },
-    { "climb": "Burden of Dreams", "text": "testing2" },
-    { "climb": "Burden of Dreams", "text": "testing 5" },
-    { "climb": "Burden of Dreams", "text": "wow this is really coool" },
-    { "climb": "Burden of Dreams", "text": "does this get smaller" },
-    { "climb": "Burden of Dreams", "text": "is resizing working" },
-    { "climb": "Burden of Dreams", "text": "daaaaaaa" },
-    { "climb": "Burden of Dreams", "text": "ww" },
-    { "climb": "Burden of Dreams", "text": "testing 500" }
+    {
+        "climb": "Burden of Dreams",
+        "text": "Start with a micro-crimp match and a high left foot stab."
+    },
+    {
+        "climb": "Burden of Dreams",
+        "text": "Deadpoint to the right-hand crimp and engage a left drop-knee."
+    },
+    {
+        "climb": "Burden of Dreams",
+        "text": "Slight thumb catch on the right-hand crimp helps with stability."
+    },
+    {
+        "climb": "Burden of Dreams",
+        "text": "Stab left foot into a tiny divot to stay balanced."
+    },
+    {
+        "climb": "Burden of Dreams",
+        "text": "Micro-adjust fingers before the final match to avoid slipping."
+    },
+    {
+        "climb": "Midnight Lightning",
+        "text": "Classic Yosemite mantle start; press down hard to rock over."
+    },
+    {
+        "climb": "Midnight Lightning",
+        "text": "Big dyno to the lightning bolt hold, control the swing with a right heel hook."
+    },
+    {
+        "climb": "Midnight Lightning",
+        "text": "Gaston right hand and slowly slap up slopers to maintain balance."
+    },
+    {
+        "climb": "Midnight Lightning",
+        "text": "Delicate topout requires pressing into the final sloper with body tension."
+    },
+    {
+        "climb": "The Mandala",
+        "text": "Start with a sharp crimp and a sidepull for body tension."
+    },
+    {
+        "climb": "The Mandala",
+        "text": "Left-hand deadpoint to a high crimp, then heel hook for stability."
+    },
+    {
+        "climb": "The Mandala",
+        "text": "Get a left foot flag early to keep balance before committing to the crux."
+    },
+    {
+        "climb": "Dreamtime",
+        "text": "Start on an undercling crimp and a high right heel hook."
+    },
+    {
+        "climb": "Dreamtime",
+        "text": "Left-hand lock-off before bumping to the small gaston."
+    },
+    {
+        "climb": "Dreamtime",
+        "text": "Final move is a lunging right-hand reach to a jug."
+    },
+    {
+        "climb": "Jade",
+        "text": "Micro-adjust your crimp before committing to the explosive deadpoint."
+    },
+    {
+        "climb": "Jade",
+        "text": "Press hard on the right toe to avoid cutting loose mid-move."
+    },
+    {
+        "climb": "Jade",
+        "text": "Quick bump to intermediate before reaching for the final jug."
+    },
+    {
+        "climb": "Big Island",
+        "text": "Use a right toe hook early to maintain compression on the slopers."
+    },
+    {
+        "climb": "Big Island",
+        "text": "Crux move requires a delicate deadpoint catch with full body engagement."
+    },
+    {
+        "climb": "Lucid Dreaming",
+        "text": "Lock off on micro-crimps before making the big reach to the next edge."
+    },
+    {
+        "climb": "Lucid Dreaming",
+        "text": "Precise foot placement is crucial to avoid barn-dooring."
+    },
+    {
+        "climb": "Story of Two Worlds",
+        "text": "Powerful gaston bump at the start followed by a crucial toe hook."
+    },
+    {
+        "climb": "Story of Two Worlds",
+        "text": "Final move requires a big reach to a sloper with full body tension."
+    },
+    {
+        "climb": "The Wheel of Life",
+        "text": "Maintain heel-toe cam through the roof section to avoid cutting loose."
+    },
+    {
+        "climb": "The Wheel of Life",
+        "text": "Stay close to the rock for precision on the lip traverse."
+    },
+    {
+        "climb": "Bokassas Fridge",
+        "text": "Start with sloper compression and engage a deep heel hook."
+    },
+    {
+        "climb": "Bokassas Fridge",
+        "text": "Big slap to a sloper rail while keeping body tension."
+    },
+    {
+        "climb": "Bokassas Fridge",
+        "text": "Final move requires delicate weight shifting on slopey holds."
+    }
 ]
