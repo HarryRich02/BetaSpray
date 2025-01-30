@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalElement = document.getElementById('modalAddClimb');
         const modalInstance = bootstrap.Modal.getInstance(modalElement);
         modalInstance.hide();
+
+        const next = document.getElementById('next');
+        next.disabled = false;
     });
 });
 

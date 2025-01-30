@@ -114,5 +114,11 @@
     {
         "climb": "Bokassas Fridge",
         "text": "Final move requires delicate weight shifting on slopey holds."
+    },
+    { "climb": "Burden of Dreams", "text": "this is a comment" },
+    { "climb": "route name", "text": "helpful advice" },
+    {
+        "climb": "Burden of Dreams",
+        "text": "Left hand on a small undercling, right hand on a sharp crimp."
     }
 ]

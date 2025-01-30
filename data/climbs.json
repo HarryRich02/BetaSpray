@@ -48,5 +48,15 @@
         "name": "Bokassas Fridge",
         "difficulty": "V14",
         "imgURL": "https://www.lacrux.com/wp-content/uploads/2019/11/Thomas-Lindinger-im-Boulder-Bokassas-Fridge.jpg"
+    },
+    {
+        "name": "route name",
+        "difficulty": "VB",
+        "imgURL": "https://m.media-amazon.com/images/S/pv-target-images/b50e6aed2ff66358263a3231591faf17a0cf5ff0ad71aba2b4f317beb27ece27._SX1080_FMjpg_.jpg"
+    },
+    {
+        "name": "Alphane",
+        "difficulty": "V17",
+        "imgURL": "https://cdn.climbing.com/wp-content/uploads/2022/08/Neilson-021822-05775-scaled.jpg?width=730"
     }
 ]
